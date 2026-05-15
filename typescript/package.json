@@ -1,0 +1,21 @@
+{
+  "name": "@frankmwase/malawi-postal-codes",
+  "version": "1.0.0",
+  "description": "A collection of postal codes for Malawi",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "malawi",
+    "postal-codes",
+    "address"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

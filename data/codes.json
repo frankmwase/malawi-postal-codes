@@ -1,0 +1,17 @@
+[
+  { "city": "Mzuzu", "code": "3020", "region": "Northern" },
+  { "city": "Karonga", "code": "3120", "region": "Northern" },
+  { "city": "Rumphi", "code": "3040", "region": "Northern" },
+  { "city": "Nkhata Bay", "code": "3050", "region": "Northern" },
+  { "city": "Chitipa", "code": "3110", "region": "Northern" },
+  { "city": "Lilongwe", "code": "1000", "region": "Central" },
+  { "city": "Salima", "code": "1050", "region": "Central" },
+  { "city": "Kasungu", "code": "1020", "region": "Central" },
+  { "city": "Ntcheu", "code": "1060", "region": "Central" },
+  { "city": "Mchinji", "code": "1040", "region": "Central" },
+  { "city": "Blantyre", "code": "2010", "region": "Southern" },
+  { "city": "Zomba", "code": "2060", "region": "Southern" },
+  { "city": "Thyolo", "code": "2110", "region": "Southern" },
+  { "city": "Mulanje", "code": "2120", "region": "Southern" },
+  { "city": "Mangochi", "code": "2080", "region": "Southern" }
+]

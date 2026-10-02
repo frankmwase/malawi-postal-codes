@@ -4,9 +4,11 @@
   "description": "A collection of postal codes for Malawi",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && node --test test/*.test.cjs",
+    "prepack": "npm run build"
   },
   "keywords": [
     "malawi",

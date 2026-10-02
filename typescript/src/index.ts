@@ -13,7 +13,7 @@ export interface PostalCode {
 }
 
 /**
- * A complete list of all Malawian postal codes.
+ * A curated list of Malawian postal codes.
  */
 export const codes: PostalCode[] = [
   {

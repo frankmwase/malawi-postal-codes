@@ -26,9 +26,9 @@ console.log(city?.city); // "Lilongwe"
 console.log(codes.length); // 15
 ```
 
-## Recommended Address Format
+## Example Address Format
 
-To ensure efficient delivery in Malawi, use the following address format:
+Confirm addressing requirements with the carrier before mailing. For illustration:
 
 ```text
 [Recipient’s Name]

@@ -4,7 +4,7 @@ An SDK for Malawi postal codes, designed for consistency and ease of use in e-co
 
 ## The "Source of Truth" Architecture
 
-This project uses a monorepo structure where all postal code data is centralized in `data/codes.json`. All language-specific libraries (TypeScript, Go, etc.) are automatically generated from this single source of truth, ensuring 100% consistency across your stack.
+This project uses a monorepo structure where its curated postal-code dataset is centralized in `data/codes.json`. The TypeScript and Go libraries are generated from that dataset; CI checks that generated files stay in sync. The current 15 entries are not a verified exhaustive registry. Confirm codes with the relevant postal provider before using them for delivery decisions. An authoritative source and last-verification date have not yet been documented.
 
 | Language | Registry | Installation |
 | :--- | :--- | :--- |
@@ -23,7 +23,7 @@ This project uses a monorepo structure where all postal code data is centralized
 ```text
 malawi-postal-codes/
 ├── data/
-│   └── codes.json           # The master list of all codes (Source of Truth)
+│   └── codes.json           # Curated dataset (source for generated SDKs)
 ├── typescript/              # The NPM package
 │   ├── src/index.ts         # Generated TypeScript source
 │   ├── package.json
@@ -33,22 +33,19 @@ malawi-postal-codes/
 │   ├── go.mod
 │   └── README.md
 ├── scripts/                 # Automation scripts
-│   └── build-data.py        # Syncs JSON data to all libraries
+│   └── build-data.py        # Validates data and syncs generated SDKs
 └── README.md                # Main project overview
 ```
 
 ## How to Update Data
 
-1.  Edit `data/codes.json` with the new or modified postal codes.
-2.  Run the build script:
-    ```bash
-    python3 scripts/build-data.py
-    ```
-3.  Commit and push the changes.
+1. Edit `data/codes.json` with new or modified entries. Record the authoritative source and verification date when available.
+2. Run `python3 scripts/build-data.py` from any directory (requires Python 3 and Go's `gofmt`). The script validates entries, rejects duplicates, and formats generated Go code.
+3. Run `python3 scripts/build-data.py --check`, `python3 -m unittest discover -s scripts -p 'test_*.py'`, `cd go && go test ./...`, and `cd typescript && npm ci && npm test` before committing.
 
-## Recommended Address Format
+## Example Address Format
 
-When mailing within or to Malawi, the Malawian postal service recommends the following format to ensure efficient delivery:
+Confirm the required addressing format with the carrier before mailing. For illustration:
 
 ```text
 [Recipient’s Name]
@@ -66,6 +63,8 @@ Malawi
 ```
 
 ## Postal Code Reference
+
+These are the 15 entries currently included, not a complete registry.
 
 | City/Town | Postal Code | Region |
 | :--- | :--- | :--- |
@@ -86,4 +85,4 @@ Malawi
 | Mchinji | 1040 | Central |
 
 ---
-*Feel free to contibute*
+*Feel free to contribute*

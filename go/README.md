@@ -5,7 +5,7 @@ A Go module for Malawi postal codes with GoDoc support for IDE intellisense.
 ## Installation
 
 ```bash
-go get github.com/prince/malawi-postal-codes/go
+go get github.com/frankmwase/malawi-postal-codes/go
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ package main
 
 import (
     "fmt"
-    "github.com/prince/malawi-postal-codes/go"
+    mwpost "github.com/frankmwase/malawi-postal-codes/go"
 )
 
 func main() {
@@ -34,9 +34,9 @@ func main() {
 }
 ```
 
-## Recommended Address Format
+## Example Address Format
 
-To ensure efficient delivery in Malawi, use the following address format:
+Confirm addressing requirements with the carrier before mailing. For illustration:
 
 ```text
 [Recipient’s Name]
